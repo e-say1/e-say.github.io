@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form>
+		<p>What day is it today?</p>
+		<div>
+			<label for="Tuesday">Tuesday</label>
+			<input type="radio" id="Tuesday" name="day" value="Tuesday"><br>
+			<label for="Wednesday">Wednesday</label>
+			<input type="radio" id="Wednesday" name="day" value="Wednesday"><br>
+			<label for="Thursday">Thursday</label>
+			<input type="radio" id="Thursday" name="day" value="Thursday" checked><br>
+			<label for="Friday">Friday</label>
+			<input type="radio" id="Friday" name="day" value="Friday"><br>
+		</div>
+	
+	</form>
+
+	<script>
+		var value = document.getElementsByName('day')
+
+		for(i = 0; i < value.length; i++) {
+                if(value[i].checked) {
+					console.log(value[i]);
+					console.log(value[i].value)
+				}
+            }
+	</script>
+</body>
+</html>

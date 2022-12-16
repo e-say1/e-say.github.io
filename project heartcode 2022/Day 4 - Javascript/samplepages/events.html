@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="welcome()">
+
+    <!-- ONCLICK FUNCTION -->
+    <button onclick="sayHello()">Say Hello </button>
+    <div class="mouseover">
+        <p></p>
+    </div>
+    <script>
+      function sayHello() {
+        alert("Hello!")
+      }
+    </script>
+
+    <!--ONCHANGE-->
+    <p>Select your favourite bubble tea store from the list</p>
+
+    <select id="mySelect" onchange="myFunction()">
+        <option value="Liho">Liho</option>
+        <option value="Gongcha">Gongcha</option>
+        <option value="Koi">Koi</option>
+        <option value="Bober">Bober</option>
+    </select>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+        }
+    </script>
+
+    <!-- ONINPUT -->
+    <p>Write down your favourite bubble tea store</p>
+
+    <input type="text" id="myInput" oninput="myFunction()">
+
+    <p id="demo2"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput").value;
+            document.getElementById("demo2").innerHTML = "You selected: " + x;
+        }
+    </script>
+        
+
+    <!-- ONMOUSEOVER & ONMOUSEOUT-->
+    <img onmouseover="smallThis(this)" onmouseout="normalImg(this)" src="image1.jpg">
+
+    <script>
+        function smallThis(image) {
+            image.style.height = "500px";
+            image.style.width = "500px";
+        }
+        function normalImg(image) {
+            image.style.height = "700px";
+            image.style.width = "700px";
+        }
+    </script>
+
+
+    <!-- ONKEYDOWN -->
+    Enter something here: <input type="text" onkeydown="sendAlert()">
+    <script>
+        function sendAlert() {
+            alert("You have entered something in the input field")
+        }
+    </script>
+
+    <!-- ONLOAD -->
+    <script>
+        function welcome() {
+            alert("Welcome to the webpage!")
+        }
+    </script>
+</body>
+</html>

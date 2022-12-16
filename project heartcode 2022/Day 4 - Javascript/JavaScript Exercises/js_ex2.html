@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercise 2</title>
+</head>
+<body>
+    <script>
+        //code here
+        var name = prompt('What is your name?')
+        var age = prompt('What is your age?')
+        var birth_year = parseInt((prompt('What year were you born in?')))
+        var birth_month = parseInt(prompt('What month were you born in?','0 is January, 11 is December'))
+        var birth_day = parseInt(prompt('What day of the month were you born in?'))
+        var date = new Date(birth_year, birth_month, birth_day, 0, 0, 0)
+
+        
+        document.write('Hi ' + name + ', you are ' + age + ' and your birthday is on ' + date)
+    </script>
+</body>
+</html>
